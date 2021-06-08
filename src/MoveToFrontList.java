@@ -11,10 +11,9 @@ public class MoveToFrontList {
 	 * linked data structure.
 	 */
 	public MoveToFrontList() {
-		// TODO: implement this
 		this.head = null;
 		this.tail = null;
-		int size = 0;
+		this.size = 0;
 	}
 
 	/**
@@ -65,7 +64,6 @@ public class MoveToFrontList {
 	 *         if no such element exists.
 	 */
 	public StringCountElement find(String key) {
-		// TODO: implement this
 		StringCountElement x = head;
 		if (x != null) {
 			if (x.key == null) { x = null; }
@@ -91,8 +89,8 @@ public class MoveToFrontList {
 	 */
 	public int rank(String key) {
 		if (size == 0) { return 0; }
-		if (head != null && head.key.equals(key)) { return 0; };
-		if (tail != null && tail.key.equals(key)) { return size - 1; };
+		if (head != null && head.key.equals(key)) { return 0; }
+		if (tail != null && tail.key.equals(key)) { return size - 1; }
 		StringCountElement x = head;
 		int r = 0;
 		if (x != null) {
